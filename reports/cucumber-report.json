@@ -1,0 +1,76 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "basic-homepage-smoke-test;open-the-homepage-successfully",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Open the homepage successfully",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1292201000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user opens the home page",
+            "match": {
+              "location": "src/steps/home.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 225607834
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the page title should contain \"Example Domain\"",
+            "match": {
+              "location": "src/steps/home.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6213833
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 18109875
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "basic-homepage-smoke-test",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Basic homepage smoke test",
+    "tags": [
+      {
+        "name": "@smoke",
+        "line": 1
+      }
+    ],
+    "uri": "src/features/smoke.feature"
+  }
+]
