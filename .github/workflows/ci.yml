@@ -29,16 +29,17 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run tests
+      - name: Run tests and generate Allure report
         env:
           CI: true
-        run: npm test
+        run: npm run test:allure
 
-      - name: Upload test reports
+      - name: Upload Allure artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: test-reports
+          name: allure-report
           path: |
-            reports
-            test-results
-            playwright-report
+            reports/allure-results
+            reports/allure-report
+            reports/cucumber-report.html
+            reports/cucumber-report.json
