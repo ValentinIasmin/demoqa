@@ -11,7 +11,10 @@
     "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx}\" \"README.md\"",
     "test": "npm run typecheck && cucumber-js --config cucumber.cjs",
-    "test:smoke": "cucumber-js --config cucumber.cjs --tags '@smoke'"
+    "test:smoke": "cucumber-js --config cucumber.cjs --tags '@smoke'",
+    "test:allure": "npm run test && npm run allure:generate",
+    "allure:generate": "npx allure generate reports/allure-results -o reports/allure-report --clean",
+    "allure:open": "npx allure open reports/allure-report"
   },
   "dependencies": {
     "@cucumber/cucumber": "^11.0.0",
@@ -24,6 +27,8 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
+    "allure-cucumberjs": "^3.10.2",
+    "allure-commandline": "^2.43.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^8.10.2",
     "eslint-import-resolver-typescript": "^3.10.1",
