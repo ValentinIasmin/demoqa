@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1292201000
+              "duration": 377685125
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 225607834
+              "duration": 201197625
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6213833
+              "duration": 11486749
             }
           },
           {
@@ -48,13 +48,29 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 18109875
+              "duration": 18976333
             }
           }
         ],
         "tags": [
           {
             "name": "@smoke",
+            "line": 1
+          },
+          {
+            "name": "@allure.label.parentSuite:DemoQA_Project",
+            "line": 1
+          },
+          {
+            "name": "@allure.label.suite:Homepage_Tests",
+            "line": 1
+          },
+          {
+            "name": "@allure.label.subSuite:Smoke",
+            "line": 1
+          },
+          {
+            "name": "@allure.label.feature:Homepage",
             "line": 1
           }
         ],
@@ -68,6 +84,22 @@
     "tags": [
       {
         "name": "@smoke",
+        "line": 1
+      },
+      {
+        "name": "@allure.label.parentSuite:DemoQA_Project",
+        "line": 1
+      },
+      {
+        "name": "@allure.label.suite:Homepage_Tests",
+        "line": 1
+      },
+      {
+        "name": "@allure.label.subSuite:Smoke",
+        "line": 1
+      },
+      {
+        "name": "@allure.label.feature:Homepage",
         "line": 1
       }
     ],
