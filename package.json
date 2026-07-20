@@ -13,7 +13,7 @@
     "test": "npm run typecheck && cucumber-js --config cucumber.cjs",
     "test:smoke": "cucumber-js --config cucumber.cjs --tags '@smoke'",
     "test:allure": "npm run test && npm run allure:generate",
-    "allure:generate": "npx allure generate reports/allure-results -o reports/allure-report --clean",
+    "allure:generate": "node -e \"process.env.JAVA_HOME=process.env.JAVA_HOME||'/opt/homebrew/Cellar/openjdk@17/17.0.19'; require('child_process').execSync('npx allure generate reports/allure-results -o reports/allure-report --clean', { stdio: 'inherit' })\"",
     "allure:open": "npx allure open reports/allure-report"
   },
   "dependencies": {
