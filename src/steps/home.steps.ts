@@ -14,6 +14,3 @@ Then('the page title should contain {string}',
     assert.match(title, new RegExp(expectedTitle, 'i'));
   }
 );
-
-//TODO:
-//FOR PR 
