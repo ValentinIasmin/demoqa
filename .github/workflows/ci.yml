@@ -19,7 +19,7 @@ jobs:
     # Use the official Playwright image — browsers & all system deps are pre-installed.
     # This completely eliminates the slow/hung `playwright install --with-deps` step.
     container:
-      image: mcr.microsoft.com/playwright:v1.54.0-noble
+      image: mcr.microsoft.com/playwright:v1.61.1-noble
       options: --user root
 
     strategy:
