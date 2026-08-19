@@ -16,6 +16,12 @@ jobs:
     name: Build & Test (Node ${{ matrix.node-version }})
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    # Use the official Playwright image — browsers & all system deps are pre-installed.
+    # This completely eliminates the slow/hung `playwright install --with-deps` step.
+    container:
+      image: mcr.microsoft.com/playwright:v1.54.0-noble
+      options: --user root
+
     strategy:
       fail-fast: false
       matrix:
@@ -43,12 +49,11 @@ jobs:
       - name: Run Linter
         run: npm run lint
 
-      - name: Install Playwright browsers & dependencies
-        run: npx playwright install --with-deps
-
       - name: Run Tests
         env:
           CI: true
+          # Tell Playwright to use the browsers already installed in the Docker image
+          PLAYWRIGHT_BROWSERS_PATH: 0
         run: npm run test
 
       - name: Generate Allure Report
@@ -67,4 +72,5 @@ jobs:
             reports/cucumber-report.html
             reports/cucumber-report.json
           retention-days: 30
+
 
