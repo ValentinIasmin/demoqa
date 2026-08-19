@@ -15,6 +15,7 @@ jobs:
   build_and_test:
     name: Build & Test (Node ${{ matrix.node-version }})
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
@@ -42,8 +43,8 @@ jobs:
       - name: Run Linter
         run: npm run lint
 
-      - name: Install Playwright Chromium & system deps
-        run: npx playwright install --with-deps chromium
+      - name: Install Playwright browsers & dependencies
+        run: npx playwright install --with-deps
 
       - name: Run Tests
         env:
