@@ -4,7 +4,7 @@ module.exports = {
     require: ['src/steps/*.ts', 'src/support/*.ts'],
     requireModule: ['ts-node/register'],
     format: [
-      'allure-cucumberjs/reporter',
+      'allure-cucumberjs/reporter:reports/dummy.txt',
       'progress-bar',
       'html:reports/cucumber-report.html',
       'json:reports/cucumber-report.json'
