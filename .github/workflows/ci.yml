@@ -52,8 +52,8 @@ jobs:
       - name: Run Tests
         env:
           CI: true
-          # Tell Playwright to use the browsers already installed in the Docker image
-          PLAYWRIGHT_BROWSERS_PATH: 0
+          # Browsers are pre-installed at /ms-playwright inside the Docker image
+          PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
         run: npm run test
 
       - name: Generate Allure Report
